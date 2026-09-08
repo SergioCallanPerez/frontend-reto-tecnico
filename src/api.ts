@@ -1,6 +1,7 @@
 import type { ApiError, Matrix, MatrixQRResponse, MatrixRotateResponse } from './types';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8080';
+const API_TOKEN = import.meta.env.VITE_API_TOKEN ?? '';
 
 export class ApiRequestError extends Error {
   readonly apiError: ApiError;
@@ -14,7 +15,7 @@ export class ApiRequestError extends Error {
 async function postMatrix<T>(path: string, matrix: Matrix): Promise<T> {
   const res = await fetch(`${API_BASE_URL}${path}`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${API_TOKEN}` },
     body: JSON.stringify({ matrix }),
   });
 
