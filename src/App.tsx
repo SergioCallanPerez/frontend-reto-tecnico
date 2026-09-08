@@ -60,7 +60,7 @@ export default function App() {
   return (
     <div className="container">
       <h1>Factorización QR y Estadísticas</h1>
-      <p className="subtitle">Consume la API Go, que a su vez orquesta la API Node — Coding Challenge Interseguro</p>
+      <p className="subtitle">Consume la API Go, que a su vez orquesta la API Node - Coding Challenge Interseguro</p>
 
       <label htmlFor="matrix-input">Matriz de entrada (JSON, array de arrays)</label>
       <textarea

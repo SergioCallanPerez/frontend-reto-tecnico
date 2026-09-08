@@ -1,14 +1,16 @@
 # Frontend
 
-UI básica en React Vite para consumir la API Go del challenge.
+UI sencilla en React Vite para consumir las apis del backend.
 
-## Correr
+## Cómo Correr
 
 ```
 npm install
 npm run dev
 ```
 
-Abre en `http://localhost:5173`. Por defecto apunta a `http://localhost:8080`.
+Abre en `http://localhost:5173`. Por defecto apunta al backend en `http://localhost:8080`.
 
-Necesita un `.env`con `VITE_API_TOKEN` — un JWT generado con `go run ./cmd/mint-token` en `api-go`, usando el mismo `JWT_SECRET` que la API.
+Necesita un `.env` (ejemplo en `.env.example`) con `VITE_API_TOKEN`. Ese valor sale de correr `go run ./cmd/mint-token` en `api-go`, el token que imprime se utiliza como `VITE_API_TOKEN` valor.
+
+Sitio en vivo: https://interseguro-reto-tecnico-2.web.app
